@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Snack Options - 15 Healthy Between-Meal Snacks</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            display: inline-block;
+            background: white;
+            color: #9c27b0;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: #f5f5f5;
+            text-decoration: none;
+        }
+        
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-card {
+            background: white;
+            border: 2px solid #ba68c8;
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .recipe-header {
+            background: linear-gradient(135deg, #9c27b0, #ba68c8);
+            color: white;
+            padding: 8px 10px;
+            margin: -12px -12px 10px -12px;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .portion-section {
+            margin-bottom: 8px;
+        }
+        
+        .portion-row {
+            padding: 5px 8px;
+            margin: 3px 0;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .male-portion {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #1976d2;
+            border-left: 3px solid #2196f3;
+        }
+        
+        .female-portion {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            color: #c2185b;
+            border-left: 3px solid #e91e63;
+        }
+        
+        .recipe-instructions {
+            background: #f8f9fa;
+            padding: 6px;
+            border-radius: 4px;
+            margin: 6px 0;
+            font-size: 9px;
+            color: #555;
+            border-left: 2px solid #28a745;
+        }
+        
+        .macro-section {
+            border-top: 1px solid #eee;
+            padding-top: 6px;
+            margin-top: 6px;
+        }
+        
+        .macro-row {
+            padding: 3px 6px;
+            margin: 2px 0;
+            border-radius: 3px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+        
+        .macro-male {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            border-left: 2px solid #28a745;
+        }
+        
+        .macro-female {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            border-left: 2px solid #dc3545;
+        }
+        
+        .tips-section {
+            background: white;
+            border: 2px solid #17a2b8;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tips-title {
+            color: #17a2b8;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .tip-item {
+            background: #e8f4f8;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .tip-header {
+            font-weight: bold;
+            color: #0c5460;
+            margin-bottom: 5px;
+        }
+        
+        .tip-content {
+            font-size: 10px;
+            color: #555;
+        }
+        
+        .footer {
+            background: #9c27b0;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🥗 SNACK OPTIONS</h1>
+            <p>15 Healthy Between-Meal Snacks for Sustained Energy</p>
+            <a href="meal_plan_pdf.html" class="back-link" >← Back to Main Menu</a>
+        </div>
+
+        <div class="recipes-grid">
+            <div class="recipe-card">
+                <div class="recipe-header">1. Greek Yogurt + Mixed Seeds</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 ¾ cup Greek yogurt, 1 tbsp mixed seeds</div>
+                    <div class="portion-row female-portion">👩 ½ cup Greek yogurt, 1 tsp mixed seeds</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Mix Greek yogurt with chia, flax, pumpkin seeds. Add cinnamon.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 200 kcal | 16g protein | 12g carbs | 8g fat</div>
+                    <div class="macro-row macro-female">👩 130 kcal | 10g protein | 8g carbs | 4g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">2. Roasted Chickpeas</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1 cup roasted chickpeas with spices</div>
+                    <div class="portion-row female-portion">👩 ¾ cup roasted chickpeas with spices</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Roast boiled chickpeas with chili powder, turmeric, chaat masala, salt.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 220 kcal | 12g protein | 35g carbs | 4g fat</div>
+                    <div class="macro-row macro-female">👩 165 kcal | 9g protein | 26g carbs | 3g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">3. Grilled Paneer Tikka</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 100g grilled paneer with vegetables</div>
+                    <div class="portion-row female-portion">👩 75g grilled paneer with vegetables</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Marinate paneer in yogurt and spices. Grill with bell peppers, onions.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 200 kcal | 18g protein | 8g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 150 kcal | 14g protein | 6g carbs | 8g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">4. Mixed Sprouts Salad</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups mixed sprouts with lemon dressing</div>
+                    <div class="portion-row female-portion">👩 1 cup mixed sprouts with lemon dressing</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Mix sprouted moong, chana with cucumber, tomato, lemon, chaat masala.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 180 kcal | 12g protein | 25g carbs | 3g fat</div>
+                    <div class="macro-row macro-female">👩 120 kcal | 8g protein | 18g carbs | 2g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">5. Boiled Eggs + Cucumber</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 2 boiled eggs with cucumber salad</div>
+                    <div class="portion-row female-portion">👩 1 boiled egg with cucumber salad</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Hard boil eggs. Prepare fresh salad with cucumber, tomato, lemon.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 180 kcal | 14g protein | 6g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 120 kcal | 8g protein | 4g carbs | 6g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">6. Mixed Nuts & Seeds</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 30g mixed nuts (almonds, walnuts, seeds)</div>
+                    <div class="portion-row female-portion">👩 20g mixed nuts and seeds</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Mix raw almonds, walnuts, pumpkin seeds. Light roast with salt.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 190 kcal | 7g protein | 6g carbs | 16g fat</div>
+                    <div class="macro-row macro-female">👩 125 kcal | 5g protein | 4g carbs | 11g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">7. Protein Smoothie</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups almond milk, 1 scoop whey protein</div>
+                    <div class="portion-row female-portion">👩 1 cup almond milk, ½ scoop whey protein</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Blend almond milk, protein powder, berries, ice. Add stevia if needed.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 280 kcal | 25g protein | 30g carbs | 6g fat</div>
+                    <div class="macro-row macro-female">👩 180 kcal | 14g protein | 18g carbs | 4g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">8. Veggie Sticks + Hummus</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 2 cups veggie sticks, 3 tbsp hummus</div>
+                    <div class="portion-row female-portion">👩 1.5 cups veggie sticks, 2 tbsp hummus</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Cut cucumber, carrots, bell peppers. Serve with homemade hummus.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 180 kcal | 7g protein | 18g carbs | 9g fat</div>
+                    <div class="macro-row macro-female">👩 120 kcal | 5g protein | 12g carbs | 6g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">9. Roasted Soya Chunks</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1 cup roasted soya chunks (30g dry)</div>
+                    <div class="portion-row female-portion">👩 ¾ cup roasted soya chunks (20g dry)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Soak soya chunks. Roast with turmeric, chili powder until crispy.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 220 kcal | 22g protein | 20g carbs | 4g fat</div>
+                    <div class="macro-row macro-female">👩 150 kcal | 15g protein | 14g carbs | 3g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">10. Fresh Fruit Bowl + Seeds</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1 cup mixed fruits, 2 tsp mixed seeds</div>
+                    <div class="portion-row female-portion">👩 ¾ cup mixed fruits, 1 tsp mixed seeds</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Cut seasonal fruits. Sprinkle chia seeds, sunflower seeds for protein.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 170 kcal | 6g protein | 32g carbs | 4g fat</div>
+                    <div class="macro-row macro-female">👩 120 kcal | 4g protein | 22g carbs | 3g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">11. Cottage Cheese + Berries</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 ¾ cup cottage cheese, ½ cup berries</div>
+                    <div class="portion-row female-portion">👩 ½ cup cottage cheese, ¼ cup berries</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Mix cottage cheese with fresh strawberries, blueberries, cinnamon.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 190 kcal | 18g protein | 14g carbs | 6g fat</div>
+                    <div class="macro-row macro-female">👩 130 kcal | 12g protein | 10g carbs | 4g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">12. Roasted Makhana</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 2 cups roasted makhana with spices</div>
+                    <div class="portion-row female-portion">👩 1.5 cups roasted makhana with spices</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Dry roast makhana. Toss with turmeric, pepper, chaat masala, salt.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 210 kcal | 10g protein | 30g carbs | 6g fat</div>
+                    <div class="macro-row macro-female">👩 160 kcal | 8g protein | 22g carbs | 4g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">13. Protein Energy Balls</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 3 balls (oats + protein + nuts)</div>
+                    <div class="portion-row female-portion">👩 2 balls (oats + protein + nuts)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Mix oats, protein powder, almond butter, dates. Form balls, refrigerate.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 200 kcal | 15g protein | 20g carbs | 8g fat</div>
+                    <div class="macro-row macro-female">👩 135 kcal | 10g protein | 14g carbs | 5g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">14. Roasted Chana Dal</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 ¼ cup roasted chana dal with spices</div>
+                    <div class="portion-row female-portion">👩 3 tbsp roasted chana dal with spices</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Dry roast chana dal until golden. Season with turmeric, chili, salt.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 185 kcal | 11g protein | 25g carbs | 3g fat</div>
+                    <div class="macro-row macro-female">👩 140 kcal | 8g protein | 19g carbs | 2g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">15. Green Tea + Almonds</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1 cup green tea, 12 raw almonds</div>
+                    <div class="portion-row female-portion">👩 1 cup green tea, 8 raw almonds</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Brew green tea. Eat soaked, peeled almonds for antioxidants and healthy fats.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 170 kcal | 6g protein | 4g carbs | 15g fat</div>
+                    <div class="macro-row macro-female">👩 115 kcal | 4g protein | 3g carbs | 10g fat</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <div class="tips-title">🌟 SNACKING SUCCESS TIPS</div>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-header">⏰ Strategic Timing</div>
+                    <div class="tip-content">Have your snack 2-3 hours after a meal to maintain steady blood sugar and prevent overeating at the next meal.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🥜 Protein Priority</div>
+                    <div class="tip-content">Choose protein-rich snacks to boost satiety, preserve muscle mass, and increase metabolic rate.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🥤 Hydration First</div>
+                    <div class="tip-content">Sometimes thirst masquerades as hunger. Drink water first, then wait 10 minutes before snacking.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">📏 Portion Control</div>
+                    <div class="tip-content">Pre-portion your snacks to avoid mindless overeating. Use small bowls and measuring tools.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🍎 Nutrient Dense</div>
+                    <div class="tip-content">Choose snacks that provide vitamins, minerals, and fiber rather than empty calories from processed foods.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🧘 Mindful Eating</div>
+                    <div class="tip-content">Eat your snack slowly and without distractions to improve satisfaction and prevent overeating.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>📌 Remember:</strong> Choose 1 snack option daily between meals to maintain energy levels</p>
+            <p><strong>🎯 Goal:</strong> Each snack supports your metabolism and prevents overeating at main meals</p>
+        </div>
+    </div>
+</body>
+</html>

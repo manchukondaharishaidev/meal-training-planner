@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lunch Options - 15 Nutritious Midday Meals</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4caf50, #388e3c);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            display: inline-block;
+            background: white;
+            color: #4caf50;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: #f5f5f5;
+            text-decoration: none;
+        }
+        
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .recipe-card {
+            background: white;
+            border: 2px solid #66bb6a;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .recipe-header {
+            background: linear-gradient(135deg, #4caf50, #66bb6a);
+            color: white;
+            padding: 10px 15px;
+            margin: -18px -18px 15px -18px;
+            border-radius: 12px 12px 0 0;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        .portion-section {
+            margin-bottom: 12px;
+        }
+        
+        .portion-row {
+            padding: 8px 10px;
+            margin: 5px 0;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        
+        .male-portion {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #1976d2;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .female-portion {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            color: #c2185b;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .recipe-instructions {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-size: 10px;
+            color: #555;
+            border-left: 3px solid #28a745;
+        }
+        
+        .macro-section {
+            border-top: 2px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .macro-row {
+            padding: 5px 10px;
+            margin: 3px 0;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .macro-male {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            border-left: 3px solid #28a745;
+        }
+        
+        .macro-female {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            border-left: 3px solid #dc3545;
+        }
+        
+        .tips-section {
+            background: white;
+            border: 2px solid #17a2b8;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tips-title {
+            color: #17a2b8;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .tip-item {
+            background: #e8f4f8;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .tip-header {
+            font-weight: bold;
+            color: #0c5460;
+            margin-bottom: 5px;
+        }
+        
+        .tip-content {
+            font-size: 10px;
+            color: #555;
+        }
+        
+        .footer {
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍽️ LUNCH OPTIONS</h1>
+            <p>15 Nutritious Midday Meals for Sustained Energy</p>
+            <a href="meal_plan_pdf.html" class="back-link" >← Back to Main Menu</a>
+        </div>
+
+        <div class="recipes-grid">
+            <div class="recipe-card">
+                <div class="recipe-header">1. Paneer Curry + Quinoa</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 150g paneer curry, 1 cup cooked quinoa (50g dry), mixed salad</div>
+                    <div class="portion-row female-portion">👩 100g paneer curry, ¾ cup cooked quinoa (35g dry), mixed salad</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Cook paneer cubes in onion-tomato gravy with mild spices. Serve with cooked quinoa and fresh cucumber-tomato salad with lemon dressing.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 520 kcal | 32g protein | 55g carbs | 16g fat</div>
+                    <div class="macro-row macro-female">👩 360 kcal | 22g protein | 38g carbs | 10g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">2. Spinach Egg Curry + Quinoa</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 3 boiled eggs, spinach curry, 1 cup cooked quinoa (50g dry)</div>
+                    <div class="portion-row female-portion">👩 2 boiled eggs, spinach curry, ¾ cup cooked quinoa (35g dry)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Boil eggs. Cook spinach curry base with garlic, onions, tomatoes, garam masala. Add eggs and simmer. Serve with fluffy quinoa.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 500 kcal | 35g protein | 48g carbs | 12g fat</div>
+                    <div class="macro-row macro-female">👩 350 kcal | 24g protein | 34g carbs | 8g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">3. Black Bean Curry + Roti</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups black bean curry, 2 whole wheat rotis</div>
+                    <div class="portion-row female-portion">👩 1 cup black bean curry, 1 whole wheat roti</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Pressure cook black beans with onion-tomato gravy, cumin, coriander. Season with Indian spices. Serve hot with fresh rotis.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 540 kcal | 30g protein | 65g carbs | 12g fat</div>
+                    <div class="macro-row macro-female">👩 380 kcal | 20g protein | 45g carbs | 8g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">4. Egg Curry + Cauliflower Rice</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 3 eggs in spicy curry, 2 cups cauliflower rice (300g raw)</div>
+                    <div class="portion-row female-portion">👩 2 eggs in spicy curry, 1.5 cups cauliflower rice (225g raw)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Boil eggs, prepare curry base with spices. Add eggs and simmer. Grate cauliflower and sauté lightly. Serve together.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 450 kcal | 32g protein | 25g carbs | 15g fat</div>
+                    <div class="macro-row macro-female">👩 320 kcal | 22g protein | 18g carbs | 10g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">5. Mixed Dal + Quinoa</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups mixed dal, 1 cup cooked quinoa (50g dry), vegetables</div>
+                    <div class="portion-row female-portion">👩 1 cup mixed dal, ¾ cup cooked quinoa (35g dry), vegetables</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Cook mixed lentils (moong, masoor, chana) with turmeric, ginger, garlic. Temper with cumin seeds. Serve with quinoa and steamed vegetables.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 520 kcal | 28g protein | 68g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 370 kcal | 20g protein | 50g carbs | 7g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">6. Mushroom Egg Bhurji + Roti</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 3 eggs, 100g mushrooms, 2 whole wheat rotis</div>
+                    <div class="portion-row female-portion">👩 2 eggs, 75g mushrooms, 1 whole wheat roti</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Sauté mushrooms with onions. Add scrambled eggs, season with herbs and spices. Serve hot with fresh whole wheat rotis.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 480 kcal | 30g protein | 42g carbs | 14g fat</div>
+                    <div class="macro-row macro-female">👩 340 kcal | 22g protein | 28g carbs | 10g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">7. Rajma + Quinoa</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups rajma (kidney beans), 1 cup cooked quinoa (50g dry)</div>
+                    <div class="portion-row female-portion">👩 1 cup rajma, ¾ cup cooked quinoa (35g dry)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Pressure cook kidney beans with onion-tomato gravy, garam masala, red chili powder. Serve hot with quinoa and pickled onions.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 540 kcal | 28g protein | 70g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 380 kcal | 20g protein | 50g carbs | 7g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">8. Tofu Bhurji + Roti</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 150g tofu scrambled, mixed vegetables, 2 whole wheat rotis</div>
+                    <div class="portion-row female-portion">👩 100g tofu scrambled, mixed vegetables, 1 whole wheat roti</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Crumble tofu and scramble with onions, tomatoes, capsicum, turmeric, nutritional yeast. Serve with fresh rotis and green salad.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 450 kcal | 32g protein | 45g carbs | 12g fat</div>
+                    <div class="macro-row macro-female">👩 300 kcal | 22g protein | 25g carbs | 8g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">9. Chickpea Salad Bowl</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups boiled chickpeas, mixed vegetables, 1 tsp olive oil</div>
+                    <div class="portion-row female-portion">👩 1 cup boiled chickpeas, mixed vegetables, ½ tsp olive oil</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Mix boiled chickpeas with cucumber, tomato, onion, coriander, lemon juice, olive oil, chaat masala. Serve as refreshing salad bowl.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 420 kcal | 22g protein | 58g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 300 kcal | 15g protein | 38g carbs | 7g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">10. Soya Chunk Curry + Quinoa</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups soya curry (40g dry chunks), 1 cup cooked quinoa (50g dry)</div>
+                    <div class="portion-row female-portion">👩 1 cup soya curry (25g dry chunks), ¾ cup cooked quinoa (35g dry)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Soak soya chunks. Cook in onion-tomato gravy with Indian spices, garam masala. Serve with fluffy quinoa and mint chutney.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 540 kcal | 36g protein | 60g carbs | 12g fat</div>
+                    <div class="macro-row macro-female">👩 380 kcal | 24g protein | 42g carbs | 8g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">11. Chole + Roti</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups chole (chickpea curry), 2 whole wheat rotis</div>
+                    <div class="portion-row female-portion">👩 1 cup chole, 1 whole wheat roti</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Cook chickpeas with onion-tomato gravy, chole masala, garam masala. Garnish with onions and coriander. Serve with hot rotis.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 520 kcal | 28g protein | 70g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 360 kcal | 18g protein | 48g carbs | 7g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">12. Egg Fried Rice</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups cooked rice (75g dry), 2 eggs, mixed vegetables</div>
+                    <div class="portion-row female-portion">👩 1 cup cooked rice (50g dry), 1 egg, mixed vegetables</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Stir-fry cooked rice with scrambled eggs, carrots, beans, peas. Season with soy sauce, pepper, and spring onions.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 480 kcal | 26g protein | 65g carbs | 12g fat</div>
+                    <div class="macro-row macro-female">👩 320 kcal | 18g protein | 44g carbs | 8g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">13. Tofu Tikka Masala + Roti</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 150g tofu in tikka masala curry, 2 whole wheat rotis</div>
+                    <div class="portion-row female-portion">👩 100g tofu in tikka masala curry, 1 whole wheat roti</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Marinate tofu cubes in yogurt and spices. Cook in creamy tomato-based tikka masala sauce. Serve with fresh rotis.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 490 kcal | 30g protein | 50g carbs | 14g fat</div>
+                    <div class="macro-row macro-female">👩 350 kcal | 22g protein | 36g carbs | 10g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">14. Mixed Bean Curry + Quinoa</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1.5 cups mixed bean curry, 1 cup cooked quinoa (50g dry)</div>
+                    <div class="portion-row female-portion">👩 1 cup mixed bean curry, ¾ cup cooked quinoa (35g dry)</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Cook mixed beans (kidney, black, pinto) with onion-tomato gravy, mixed spices. Serve with quinoa and fresh salad.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 520 kcal | 30g protein | 65g carbs | 10g fat</div>
+                    <div class="macro-row macro-female">👩 370 kcal | 22g protein | 46g carbs | 7g fat</div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-header">15. Protein Quinoa Bowl</div>
+                <div class="portion-section">
+                    <div class="portion-row male-portion">👨 1 cup cooked quinoa (50g dry), 100g paneer, mixed vegetables</div>
+                    <div class="portion-row female-portion">👩 ¾ cup cooked quinoa (35g dry), 75g paneer, mixed vegetables</div>
+                </div>
+                <div class="recipe-instructions">
+                    <strong>Recipe:</strong> Layer cooked quinoa with grilled paneer, roasted vegetables, avocado. Drizzle with tahini dressing and sprinkle pumpkin seeds.
+                </div>
+                <div class="macro-section">
+                    <div class="macro-row macro-male">👨 510 kcal | 32g protein | 52g carbs | 14g fat</div>
+                    <div class="macro-row macro-female">👩 360 kcal | 23g protein | 38g carbs | 10g fat</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <div class="tips-title">🌟 LUNCH SUCCESS TIPS</div>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-header">🥗 Balanced Macros</div>
+                    <div class="tip-content">Aim for 25-35g protein, complex carbs, and healthy fats in every lunch to maintain energy levels.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🕐 Timing Strategy</div>
+                    <div class="tip-content">Eat lunch 4-5 hours after breakfast and 4-5 hours before dinner for optimal metabolism.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🌶️ Spice Benefits</div>
+                    <div class="tip-content">Use metabolism-boosting spices like turmeric, cumin, coriander, and black pepper in your curries.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🥒 Vegetable Volume</div>
+                    <div class="tip-content">Fill half your plate with vegetables to increase fiber and nutrient density while controlling calories.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">🍽️ Mindful Eating</div>
+                    <div class="tip-content">Eat slowly and chew thoroughly to improve digestion and feel satisfied with smaller portions.</div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header">📏 Portion Precision</div>
+                    <div class="tip-content">Use measuring cups for grains and weigh protein sources to maintain accurate caloric intake.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>📌 Remember:</strong> Choose 1 lunch option daily and pair with breakfast, snack, and dinner selections</p>
+            <p><strong>🎯 Goal:</strong> Each lunch provides sustained energy and supports your fat loss journey to 13% body fat</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>6-Day Vegetarian + Eggs Fat Loss Meal Plan - Main Index</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nav-menu {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-menu a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .nav-menu a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .targets-section {
+            background: white;
+            border: 3px solid #4169e1;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .targets-title {
+            color: #4169e1;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .targets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .target-card {
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .male-target {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #1976d2;
+            border: 2px solid #2196f3;
+        }
+        
+        .female-target {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            color: #c2185b;
+            border: 2px solid #e91e63;
+        }
+        
+        .meal-links-section {
+            margin: 40px 0;
+        }
+        
+        .meal-links-title {
+            color: #27ae60;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .meal-links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .meal-link-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+        
+        .meal-link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+        
+        .breakfast-card {
+            border-color: #ff9800;
+            background: linear-gradient(135deg, #fff8e1, #ffecb3);
+        }
+        
+        .lunch-card {
+            border-color: #4caf50;
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+        }
+        
+        .snack-card {
+            border-color: #9c27b0;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+        }
+        
+        .dinner-card {
+            border-color: #3f51b5;
+            background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+        }
+        
+        .meal-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .meal-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .meal-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .meal-link {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .meal-link:hover {
+            background: #219a52;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .schedule-section {
+            background: white;
+            border: 3px solid #32cd32;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .schedule-title {
+            color: #228b22;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+        
+        .day-card {
+            background: #f0fff0;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #98fb98;
+            font-size: 11px;
+        }
+        
+        .day-card.rest-day {
+            background: #fff8dc;
+            border-color: #ffd700;
+            color: #ff8c00;
+            font-weight: bold;
+        }
+        
+        .day-number {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #228b22;
+        }
+        
+        .guidelines-section {
+            background: white;
+            border: 3px solid #ffa500;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .guidelines-title {
+            color: #ff8c00;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .guideline-card {
+            background: #fffaf0;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ffebcd;
+        }
+        
+        .guideline-header {
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 5px;
+        }
+        
+        .guideline-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .guideline-list li {
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .timeline-section {
+            background: white;
+            border: 3px solid #4169e1;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-title {
+            color: #4169e1;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-content {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            .meal-link-card:hover {
+                transform: none;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-menu">
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="meal_plan_pdf.html">📋 All Meal Plans</a>
+            <a href="male_training_pdf.html">💪 Male Training</a>
+            <a href="female_training_pdf.html">🏃‍♀️ Female Training</a>
+        </div>
+
+        <div class="header">
+            <h1>6-DAY VEGETARIAN + EGGS FAT LOSS MEAL PLAN</h1>
+            <p>Complete Guide to Reach 13% Body Fat | 60 Total Recipe Options | Indian Cuisine</p>
+        </div>
+
+        <div class="targets-section">
+            <div class="targets-title">📊 DAILY NUTRITIONAL TARGETS</div>
+            <div class="targets-grid">
+                <div class="target-card male-target">
+                    👨 <strong>MALE TARGETS</strong><br><br>
+                    🎯 1900 kcal/day<br>
+                    💪 170-185g protein<br>
+                    🌾 180g carbs<br>
+                    🥑 50g fat
+                </div>
+                <div class="target-card female-target">
+                    👩 <strong>FEMALE TARGETS</strong><br><br>
+                    🎯 1400 kcal/day<br>
+                    💪 120-135g protein<br>
+                    🌾 140g carbs<br>
+                    🥑 40g fat
+                </div>
+            </div>
+        </div>
+
+        <div class="meal-links-section">
+            <div class="meal-links-title">🍽️ MEAL PLAN SECTIONS</div>
+            <div class="meal-links-grid">
+                <div class="meal-link-card breakfast-card">
+                    <span class="meal-icon">🌅</span>
+                    <div class="meal-title">BREAKFAST OPTIONS</div>
+                    <div class="meal-subtitle">15 High-Protein Morning Meals</div>
+                    <a href="breakfast_options.html" class="meal-link">View Breakfast Menu</a>
+                </div>
+                
+                <div class="meal-link-card lunch-card">
+                    <span class="meal-icon">🍽️</span>
+                    <div class="meal-title">LUNCH OPTIONS</div>
+                    <div class="meal-subtitle">15 Nutritious Midday Meals</div>
+                    <a href="lunch_options.html" class="meal-link">View Lunch Menu</a>
+                </div>
+                
+                <div class="meal-link-card snack-card">
+                    <span class="meal-icon">🥗</span>
+                    <div class="meal-title">SNACK OPTIONS</div>
+                    <div class="meal-subtitle">15 Healthy Between-Meal Snacks</div>
+                    <a href="snack_options.html" class="meal-link">View Snack Menu</a>
+                </div>
+                
+                <div class="meal-link-card dinner-card">
+                    <span class="meal-icon">🌙</span>
+                    <div class="meal-title">DINNER OPTIONS</div>
+                    <div class="meal-subtitle">15 Satisfying Evening Meals</div>
+                    <a href="dinner_options.html" class="meal-link">View Dinner Menu</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-section">
+            <div class="schedule-title">📅 6-DAY WEEKLY MEAL SCHEDULE</div>
+            <div class="schedule-grid">
+                <div class="day-card">
+                    <div class="day-number">DAY 1</div>
+                    <div>Choose 1 option from each meal category</div>
+                </div>
+                <div class="day-card">
+                    <div class="day-number">DAY 2</div>
+                    <div>Choose 1 option from each meal category</div>
+                </div>
+                <div class="day-card">
+                    <div class="day-number">DAY 3</div>
+                    <div>Choose 1 option from each meal category</div>
+                </div>
+                <div class="day-card">
+                    <div class="day-number">DAY 4</div>
+                    <div>Choose 1 option from each meal category</div>
+                </div>
+                <div class="day-card">
+                    <div class="day-number">DAY 5</div>
+                    <div>Choose 1 option from each meal category</div>
+                </div>
+                <div class="day-card">
+                    <div class="day-number">DAY 6</div>
+                    <div>Choose 1 option from each meal category</div>
+                </div>
+                <div class="day-card rest-day">
+                    <div class="day-number">DAY 7</div>
+                    <div>🛌 REST DAY<br>Flexible eating within calorie limits</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="guidelines-section">
+            <div class="guidelines-title">📋 ESSENTIAL GUIDELINES FOR SUCCESS</div>
+            <div class="guidelines-grid">
+                <div class="guideline-card">
+                    <div class="guideline-header">🥤 HYDRATION</div>
+                    <ul class="guideline-list">
+                        <li>👨 Male: 3-4 liters water daily</li>
+                        <li>👩 Female: 2.5-3 liters water daily</li>
+                        <li>Green tea: 2-3 cups daily</li>
+                        <li>Drink water before meals</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-header">⏰ MEAL TIMING</div>
+                    <ul class="guideline-list">
+                        <li>Breakfast: 7-9 AM</li>
+                        <li>Mid-morning snack: 11 AM - 12 PM</li>
+                        <li>Lunch: 1-2 PM</li>
+                        <li>Dinner: 7-8 PM</li>
+                        <li>No eating 3 hours before bed</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-header">🍽️ PORTION CONTROL</div>
+                    <ul class="guideline-list">
+                        <li>Use measuring cups and food scale</li>
+                        <li>Eat slowly and mindfully</li>
+                        <li>Stop eating when 80% full</li>
+                        <li>Chew each bite thoroughly</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-header">📊 PROGRESS TRACKING</div>
+                    <ul class="guideline-list">
+                        <li>Weekly body measurements</li>
+                        <li>Monthly progress photos</li>
+                        <li>Daily weight (same time)</li>
+                        <li>Food diary and calorie tracking</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-header">💊 SUPPLEMENTS (Optional)</div>
+                    <ul class="guideline-list">
+                        <li>Whey/Plant protein powder</li>
+                        <li>Multivitamin complex</li>
+                        <li>Omega-3 fatty acids</li>
+                        <li>Vitamin D3</li>
+                        <li>Probiotics</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-header">🎯 SUCCESS FACTORS</div>
+                    <ul class="guideline-list">
+                        <li>Consistent meal timing</li>
+                        <li>Adequate protein at each meal</li>
+                        <li>Regular exercise routine</li>
+                        <li>7-8 hours quality sleep</li>
+                        <li>Stress management techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <div class="timeline-title">⏱️ EXPECTED TIMELINE TO 13% BODY FAT</div>
+            <div class="timeline-content">
+                <strong>👨 MALES:</strong> 12-16 weeks (starting from 18-20% body fat)<br><br>
+                <strong>👩 FEMALES:</strong> 16-20 weeks (starting from 25-28% body fat)<br><br>
+                <strong>📈 RATE:</strong> 1-2% body fat loss per month with consistent adherence<br><br>
+                <strong>🔥 KEY TO SUCCESS:</strong> Consistent adherence to both meal plan and exercise routine is essential for achieving optimal results. Combine this meal plan with the provided training schedules for maximum effectiveness.
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>📌 HOW TO USE THIS MEAL PLAN:</strong></p>
+            <p>1. Click on each meal category above to access detailed recipes</p>
+            <p>2. Choose 1 option from each category daily (Breakfast + Lunch + Snack + Dinner)</p>
+            <p>3. Follow portion sizes based on your gender</p>
+            <p>4. Track your macros and progress weekly</p>
+            <p>5. Combine with regular exercise for best results</p>
+        </div>
+    </div>
+</body>
+</html>
